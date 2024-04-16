@@ -1,0 +1,34 @@
+COAW(option, next_dropdown_id)
+- option.click()
+- WebDriverWait until next_dropdown_id is clickable
+
+For state in state_dropdown (start 4, end 5)
+  COAW(state, district)
+  
+  For district in district_dropdown (start 6, end 7)
+    COAW(district, vdc_mun)
+
+    For vdc_mun in vdc_mun_dropdown (start from 1 to the end)
+      COAW(vdc_mun, ward)
+
+      For ward in ward_dropdown (start from 1 to the end)
+        COAW(ward, reg_centre)
+
+        For reg_centre in reg_centre_dropdown (start from 1 to the end)
+          // Click Submit
+          // Click on Alphabet
+          // Show 100 Entries
+          // Calculate how many pages to scrape
+          // Scrape 1st page 
+          // Click Next 
+          // Scrape Next page
+          // Once all Pages are scraped
+          // Go to site_input
+          // Reselect all options
+            Function(current_lvl, )
+
+
+Function (site_input, site_database)
+  driver.get(site_input)
+    Function (state_id, district_id, vdc_mun_id, ward_id, reg_centre_id)
+      
